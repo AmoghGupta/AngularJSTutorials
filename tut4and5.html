@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+    <input type="text" ng-model="name">
+    <div> hello {{name}} </div>
+
+      <div ng-init= "myvar='from init'"  >
+        {{myvar}}
+Your default variable: <input type="text" ng-model="myvar">
+      </div>
+
+</body>
+
+</html>

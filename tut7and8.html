@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+  <div ng-controller="control1">
+    Select your favourite:
+    <button ng-click= "php()">PHP</button>
+    <button ng-click= "cpp()">C++</button>
+    <button ng-click= "java()">Java</button>
+
+    <p> You have selected: {{myfavlang}} </p>
+  </div>
+
+  <script>
+  // [] here we load the dependencies of the module
+var application = angular.module('myapp',[]);
+application.controller("control1",['$scope',function($scope){
+$scope.myfavlang ='None';
+$scope.php = function(){
+  $scope.myfavlang ='PHP';
+};
+$scope.cpp = function(){
+  $scope.myfavlang ='CPP';
+};
+$scope.java = function(){
+  $scope.myfavlang ='Java';
+};
+}]);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+
+  Your Name: <input type="text" ng-model="name1">
+  {{'Welcome: ' + name1 | uppercase}}
+  <br>
+  Your Name: <input type="text" ng-model="name2">
+  {{'Welcome: ' + name2 | lowercase}}
+  <br>
+  Your Currency: <input type="text" ng-model="curren">
+  {{curren | currency:"Rs.":0 }}
+</body>
+
+</html>

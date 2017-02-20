@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-init="myfav=[{name:'PHP', extension: '.php'},
+{name:'javascript', extension: '.js'},
+{name:'c++', extension: '.cpp'}
+]">
+
+<p ng-repeat="x in myfav">{{x.name}} and {{x.extension}}</p>
+</div>
+</body>
+
+</html>
