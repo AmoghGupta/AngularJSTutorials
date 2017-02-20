@@ -7,18 +7,26 @@ $routeProvider
 templateUrl:'login.html'
 })
 .when('/dashboard',{
-templateUrl:'dashboard.html'
+  resolve: {
+    "check" :function($location,$rootScope){
+      if(!$rootScope.loggedIn){
+        $location.path('/');
+      }else{
+        templateUrl:'dashboard.html'
+      }
+    }
+  },
+  templateUrl:'dashboard.html'
 })
 .otherwise({
 redirectTo:'/'
 });
 }]);
 
-app.controller('login', ['$scope','$location', function($scope, $location){
+app.controller('login', ['$scope','$location','$rootScope', function($scope, $location, $rootScope){
 $scope.submit = function(){
-  var uname= $scope.username;
-  var password= $scope.password;
   if($scope.username == 'admin' && $scope.password== 'admin'){
+    $rootScope.loggedIn = true;
     $location.path('/dashboard');
   }
   else{
