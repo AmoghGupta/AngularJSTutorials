@@ -1,23 +1,28 @@
 {
     "records": [{
             "Name": "John",
-            "Age": 18
+            "Age": 18,
+            "favcolor" : "red"
         },
         {
             "Name": "Edge",
-            "Age": 28
+            "Age": 28,
+            "favcolor" : "black"
         },
         {
             "Name": "Undertaker",
-            "Age": 48
+            "Age": 48,
+            "favcolor" : "pink"
         },
         {
             "Name": "Lita",
-            "Age": 28
+            "Age": 28,
+            "favcolor" : "green"
         },
         {
             "Name": "Trish",
-            "Age": 48
+            "Age": 48,
+            "favcolor" : "brown"
         }
     ]
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="controller17.js"></script>
+</head>
+
+<body ng-app="myapp17">
+<input type="text" ng-model = "message.property">
+<p ng-repeat="i in [1]">
+  <input type="text" ng-model="message.property">
+  You Wrote: {{message.property}}
+</p>
+[Outer] You Wrote : {{message.property}}
+
+</body>
+
+</html>
