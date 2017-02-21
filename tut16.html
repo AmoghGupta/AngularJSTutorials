@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>expressions </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="controller16.js"></script>
+</head>
+
+<body ng-app="myapp16">
+
+    <div ng-controller="people">
+        <ul>
+            <h2> Names and age of programmers: </h2>
+            <li ng-repeat="person in persons |filter:globalsearch">
+                {{ person.Name + ':' + person.Age + ':' + person.favcolor }}
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="searchBoxes">
+        Global Search: <input type="text" ng-model="globalsearch.$"><br>
+        Name filter: <input type="text" ng-model="globalsearch.Name"><br>
+        Age filter: <input type="text" ng-model="globalsearch.Age"><br>
+        Color filter: <input type="text" ng-model="globalsearch.favcolor">
+    </div>
+
+
+</body>
+
+</html>
